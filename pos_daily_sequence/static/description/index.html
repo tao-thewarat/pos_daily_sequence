@@ -1,0 +1,161 @@
+<section class="oe_container">
+  <div class="oe_row oe_spaced">
+    <div class="oe_span12" style="text-align:center;">
+      <h1 style="margin-bottom:8px;">POS Daily Order Number Reset</h1>
+      <p style="font-size:16px; margin:0;">
+        Automatically reset POS order numbering every day for <strong>Odoo 19</strong>.
+      </p>
+      <p style="color:#666; margin-top:6px;">
+        Ideal for retail & restaurants that close and reconcile sales daily (Z-reports).
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Cover / Banner -->
+<section class="oe_container">
+  <div class="oe_row oe_spaced">
+    <div class="oe_span12" style="text-align:center;">
+      <img src="./assets/screenshots/banner.png" alt="POS Daily Order Number Reset - Banner" style="max-width:100%; border-radius:12px;">
+      <p style="color:#888; margin-top:8px;">Cover image</p>
+    </div>
+  </div>
+</section>
+
+<section class="oe_container">
+  <div class="oe_row oe_spaced">
+    <div class="oe_span6">
+      <h2>Overview</h2>
+      <p>
+        By default, Odoo uses a continuous sequence for POS orders. This add-on introduces a
+        <strong>daily counter</strong> that starts again from <strong>1</strong> after a configurable reset time,
+        without changing standard POS workflows.
+      </p>
+
+      <h3>Why use this module?</h3>
+      <ul>
+        <li>Daily reconciliation becomes clearer (e.g., end-of-day reports / Z-reports)</li>
+        <li>Order numbers stay short and easy to track</li>
+        <li>Historical order numbers are never changed</li>
+      </ul>
+    </div>
+
+    <div class="oe_span6">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Daily automatic reset of POS order numbering</li>
+        <li>Custom reset time (not limited to midnight)</li>
+        <li>Works per POS configuration</li>
+        <li>Supports multiple POS in the same company</li>
+        <li>Timezone-aware reset logic</li>
+        <li>No impact on accounting entries or invoices</li>
+        <li>Concurrency-safe counter logic</li>
+        <li>Designed for production environments</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="oe_container">
+  <div class="oe_row oe_spaced">
+    <div class="oe_span12">
+      <h2>How it works</h2>
+      <ul>
+        <li>Generates a separate counter per POS and per reset period</li>
+        <li>Automatically starts numbering from <strong>1</strong> after the configured reset time</li>
+        <li>Keeps historical order numbers unchanged</li>
+        <li>Does not modify Odoo’s core POS sequence</li>
+      </ul>
+
+      <h3>Example</h3>
+      <table class="table table-bordered" style="max-width:520px;">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Order Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2025-03-01</td><td>0001</td></tr>
+          <tr><td>2025-03-01</td><td>0002</td></tr>
+          <tr><td>2025-03-02</td><td>0001</td></tr>
+          <tr><td>2025-03-02</td><td>0002</td></tr>
+        </tbody>
+      </table>
+      <p style="color:#666;">Each reset period starts again from 1.</p>
+    </div>
+  </div>
+</section>
+
+<section class="oe_container">
+  <div class="oe_row oe_spaced">
+    <div class="oe_span12">
+      <h2>Configuration</h2>
+      <ol>
+        <li>Go to <strong>Point of Sale → Configuration → Point of Sale</strong></li>
+        <li>Open your POS configuration</li>
+        <li>Enable <strong>Daily Counter Reset</strong></li>
+        <li>Set the desired reset time (HH:MM)</li>
+        <li>Save</li>
+      </ol>
+      <p style="color:#666;">
+        The system will automatically handle numbering based on your configuration.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Screenshots -->
+<section class="oe_container">
+  <div class="oe_row oe_spaced">
+    <div class="oe_span12" style="text-align:center;">
+      <h2>Screenshots</h2>
+      <p style="color:#666;">Add real screenshots to increase your app score & conversion rate.</p>
+    </div>
+
+    <div class="oe_span6" style="text-align:center;">
+      <img src="./assets/screenshots/screenshot1.png" alt="Screenshot 1" style="max-width:100%; border-radius:12px;">
+      <p style="color:#888; margin-top:8px;">POS configuration</p>
+    </div>
+
+    <div class="oe_span6" style="text-align:center;">
+      <img src="./assets/screenshots/receipt.png" alt="Screenshot 2" style="max-width:100%; border-radius:12px;">
+      <p style="color:#888; margin-top:8px;">Daily order number in receipt / order</p>
+    </div>
+  </div>
+</section>
+
+<section class="oe_container">
+  <div class="oe_row oe_spaced">
+    <div class="oe_span12">
+      <h2>Technical Information</h2>
+      <ul>
+        <li><strong>Technical name:</strong> pos_daily_sequence</li>
+        <li><strong>Version:</strong> 19.0</li>
+        <li><strong>Dependency:</strong> point_of_sale</li>
+        <li><strong>Model added:</strong> pos.daily.counter</li>
+        <li><strong>Field added:</strong> daily_order_number on pos.order</li>
+        <li><strong>License:</strong> OPL-1</li>
+      </ul>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>Does not alter accounting logic</li>
+        <li>Does not modify posted invoices</li>
+        <li>Does not interfere with POS sessions</li>
+        <li>Only controls how the daily order number is generated</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="oe_container">
+  <div class="oe_row oe_spaced">
+    <div class="oe_span12">
+      <h2>Support</h2>
+      <p>
+        Need help with installation or configuration? Please contact the author via the Odoo Apps support channel.
+      </p>
+    </div>
+  </div>
+</section>

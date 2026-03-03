@@ -20,6 +20,9 @@
             "pos_daily_sequence/static/src/xml/receipt_header.xml",
         ],
     },
+    "images": [
+        "static/description/assets/screenshots/banner.png",
+    ],
     "installable": True,
     "application": False,
     "auto_install": False,
