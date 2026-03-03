@@ -4,7 +4,7 @@
     "version": "19.0.1.0.0",
     "author": "Lorddoor",
     "category": "Point of Sale",
-    "license": "LGPL-3",
+    "license": "OPL-1",
     "depends": [
         "point_of_sale",
     ],
