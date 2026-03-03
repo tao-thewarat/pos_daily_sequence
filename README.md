@@ -90,4 +90,4 @@ This module is designed to be simple and safe for production environments.
 
 ## License
 
-LGPL-3
+OPL-1
