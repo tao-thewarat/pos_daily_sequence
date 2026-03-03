@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="pos_config_view_form" model="ir.ui.view">
+            <field name="name">pos.config.form.inherit.reset_daily_counter</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.pos_config_view_form" />
+            <field name="arch" type="xml">
+                <setting id="other_devices" position="after">
+                    <setting id="reset_daily_counter" string="Daily Counter Reset"
+                        help="Hour in 24h format. Example: 0.0 = 00:00, 6.5 = 06:30">
+                        <field name="enable_daily_reset" />
+                        <div class="content-group" invisible="not enable_daily_reset">
+                            <div class="row mb-2">
+                                <div class="col-lg-6">
+                                    <field name="reset_time"
+                                        class="w-100" />
+                                </div>
+                                <div class="col-lg-6">
+                                    <field name="tz"
+                                        class="w-100" required="enable_daily_reset"/>
+                                </div>
+                            </div>
+                        </div>
+                    </setting>
+                </setting>
+            </field>
+        </record>
+    </data>
+</odoo>

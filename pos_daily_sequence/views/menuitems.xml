@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <menuitem
+    name="Daily Counter"
+    id="menu_action_daily_counter"
+    action="pos_daily_sequence.action_pos_daily_counter"
+    parent="point_of_sale.menu_point_config_product"
+    sequence="11"
+  />
+</odoo>

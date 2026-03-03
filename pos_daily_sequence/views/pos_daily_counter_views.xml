@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_pos_daily_counter_list" model="ir.ui.view">
+        <field name="name">pos.daily.counter.list</field>
+        <field name="model">pos.daily.counter</field>
+        <field name="arch" type="xml">
+            <list string="POS Daily Counters" default_order="period_start desc">
+                <field name="period_start" />
+                <field name="pos_config_id" />
+                <field name="company_id" />
+                <field name="number" />
+            </list>
+        </field>
+    </record>
+
+    <record id="view_pos_daily_counter_form" model="ir.ui.view">
+        <field name="name">pos.daily.counter.form</field>
+        <field name="model">pos.daily.counter</field>
+        <field name="arch" type="xml">
+            <form string="POS Daily Counter">
+                <sheet>
+                    <group>
+                        <field name="period_start" />
+                        <field name="pos_config_id" />
+                        <field name="company_id" />
+                        <field name="number" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_pos_daily_counter" model="ir.actions.act_window">
+        <field name="name">POS Daily Counters</field>
+        <field name="res_model">pos.daily.counter</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-inherit="point_of_sale.ReceiptHeader" t-inherit-mode="extension">
+        <xpath expr="//span[contains(@class,'pos-receipt-vat')]" position="before">
+            <div t-if="order.daily_order_number" style="font-size: 16px;" class="mb-3 mt-3">
+                <span>No. </span>
+                <t t-esc="order.daily_order_number"/>
+            </div>
+        </xpath>
+    </t>
+</templates>
